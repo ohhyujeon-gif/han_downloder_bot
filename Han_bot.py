@@ -22,7 +22,7 @@ def download(update, context):
         update.message.reply_text(f"Error: {str(e)}")
 
 def main():
-    bot_token = os.getenv("BOT_TOKEN")  # BOT_TOKEN Render ke env vars me set karna hoga
+    bot_token = os.getenv("BOT_TOKEN") 
     updater = Updater(bot_token, use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("download", download))
